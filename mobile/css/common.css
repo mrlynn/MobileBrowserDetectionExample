@@ -1,0 +1,43 @@
+.adbanner{
+width:100%;
+text-align:center;
+padding-top:15x;
+background:url(images/adstop.jpg) top repeat-x #FEF1F9(color of base bg);
+}
+.adbannerbottom{
+padding-bottom:15px;
+width:100%;
+text-align:center;
+background:url(images/adsbottom.jpg) repeat-x bottom;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+#top {
+    position: absolute;
+}
+h1, p {
+    margin: 0;
+    padding: 0.3em 0;
+}
+#container {
+    min-height: 100%;
+    margin-bottom: -135px;
+}
+* html #container {
+    height: 100%;
+}
+#footer-spacer {
+    height: 135px;
+}
+#footer {
+    border-top: 1px solid #000;
+    height: 134px;
+}
+

@@ -1,0 +1,20 @@
+<?php
+header("Location: Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Location: Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+include_once('includes/config.inc.php');
+include_once('includes/functions.inc.php');
+$useragent=$_SERVER['HTTP_USER_AGENT'];
+if (ismobile($useragent)) {
+	if (isipad($_SERVER['HTTP_USER_AGENT'])) {
+		header("Location: $IPADURL");
+	} else {
+		if (isiphone($_SERVER['HTTP_USER_AGENT'])) {
+			header("Location: $IPHONEURL");
+		} else {
+			header("Location: $MOBILEURL");
+		}
+	}
+} else {
+	header("Location: $NORMALURL");
+}
+?>
